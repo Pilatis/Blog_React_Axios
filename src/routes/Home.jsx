@@ -10,14 +10,14 @@ const Home = () => {
      
     try {
 
-      const response = await blogFetch.get("/posts");
+      const response = await blogFetch.get("/posts");// Faz uma requisição GET usando um cliente HTTP (por exemplo, Axios)
 
-      const data = response.data;
+      const data = response.data;// Obtém os dados da resposta da requisição
 
-        setPosts(data);
+        setPosts(data);// Atualiza o estado 'posts' com os dados da API
     } catch (error) {
-       console.log(error) //Essas função faz uma requisição GET para recyperar posts mais recentes. A biblioteca axios usa o HTTP e as respostas são armazenadas no estado posts se falhar vai ter uma mensagem ERROR
-    }
+       console.log(error) //Essas função faz uma requisição GET para recuperar posts mais recentes. 
+    }  //A biblioteca axios usa o HTTP e as respostas são armazenadas no estado posts se falhar vai ter uma mensagem ERROR
 
    }
 
