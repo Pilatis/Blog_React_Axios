@@ -6,7 +6,7 @@ import "./Home.css"
 const Home = () => {
    const [posts, setPosts] = useState([]) //armazenar os posts da API
 
-   const getPosts = async() => { //faz uma requisição GET para a API JSONPlaceholder para recuperar os posts mais recentes.
+   const getPosts = async() => { //Com a função assíncrona ele faz uma requisição GET para a API JSONPlaceholder para recuperar os posts mais recentes.
      
     try {
 
