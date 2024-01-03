@@ -1,4 +1,4 @@
-import blogFetch from "../axios/config" //axios é uma bibliotecas de HTTP
+import blogFetch from "../../axios/config" //axios é uma bibliotecas de HTTP
 import { useState, useEffect} from "react"; //hooks do react
 import { Link } from "react-router-dom"; //Criar links que navegam nas paginas
 import "./Home.css"
