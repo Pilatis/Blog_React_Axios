@@ -9,9 +9,7 @@ const Home = () => {
    const getPosts = async() => { //faz uma requisição GET para a API JSONPlaceholder para recuperar os posts mais recentes.
      
     try {
-
       const response = await blogFetch.get("/posts");
-
       const data = response.data;
 
         setPosts(data);
