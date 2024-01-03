@@ -5,10 +5,10 @@ import './index.css'
 import './App.css'
 
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Home from "./routes/Home";
-import NewPost from "./routes/NewPost"
-import Admin from "./routes/Admin.jsx"
-import EditPost from "./routes/EditPost.jsx"
+import Home from "./routes/Home/Home.jsx";
+import NewPost from "./routes/NewPost/NewPost.jsx"
+import Admin from "./routes/Admin/Admin.jsx"
+import EditPost from "./routes/EditPost/EditPost.jsx"
 
 const router = createBrowserRouter([
   {

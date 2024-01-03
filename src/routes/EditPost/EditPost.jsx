@@ -1,7 +1,7 @@
-import blogFetch from "../axios/config";
+import blogFetch from "../../axios/config";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom"
-import "./NewPost.css"
+
 
 const NewPost = () => { //Define o compoenente React chamado NewPost. ele sera usado para editar um novo post
     const navigate = useNavigate(); //importa o hook useNavigate da biblioteca react-router-dom. O hook useNavigate permite que você navegue entre rotas de forma programática no seu aplicativo React.

@@ -1,7 +1,8 @@
-import blogFetch from "../axios/config" //axios é uma bibliotecas de HTTP
+import blogFetch from "../../axios/config" //axios é uma bibliotecas de HTTP
 import { useState, useEffect} from "react"; //hooks do react
 import { Link } from "react-router-dom"; //Criar links que navegam nas paginas
 import "./Home.css"
+import Loading from "../../components/Loading/Loading";
 
 const Home = () => {
    const [posts, setPosts] = useState([]) //armazenar os posts da API
@@ -16,7 +17,7 @@ const Home = () => {
 
         setPosts(data);
     } catch (error) {
-       console.log(error) //Essas função faz uma requisição GET para recyperar posts mais recentes. A biblioteca axios usa o HTTP e as respostas são armazenadas no estado posts se falhar vai ter uma mensagem ERROR
+       console.log(error) //Essas função faz uma requisição GET para recuperar posts mais recentes. A biblioteca axios usa o HTTP e as respostas são armazenadas no estado posts se falhar vai ter uma mensagem ERROR
     }
 
    }
@@ -29,7 +30,7 @@ const Home = () => {
     return (
         <div className="home">
         <h1>Últimos Posts</h1>
-        {posts.length === 0 ? (<p>Carregando...</p>) : (
+        {posts.length === 0 ? (<Loading />) : (
           posts.map((post) => (
             <div className="post" key={post.id}> 
               <h2>{post.title}</h2>
